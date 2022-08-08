@@ -159,7 +159,7 @@ header.shadow .logo{
     margin-top: 5px;
 }
 .post-title{
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--text-color);
     /* To Remain Title In 2 Lines */
@@ -168,6 +168,11 @@ header.shadow .logo{
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+/* .main-title-color{
+    color: #Fad243;
+} */
+
 .post-date{
     display: flex;
     font-size: 0.875rem;
@@ -176,7 +181,7 @@ header.shadow .logo{
     margin-top: 4px;
 }
 .post-description{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 1.5rem;
     margin: 5px 0 10px;
     /* To Remain Title In 3 Lines */
