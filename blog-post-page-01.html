@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSMILAOS - ລາຍລະອຽດເນື້ອຫາ</title>
+    <link rel=" shortcut icon" href="assets/img/clients/ssmi-3.png">
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="assets/css/blog.css">
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Nav -->
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="blog-01.html" class="logo">Lar<span>Dev2022</span></a>
+            <!-- Login Btn -->
+            <a href="#" class="login">Life Long Learning</a>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <section class="post-header">
+        <div class="header-content post-container">
+            <!-- Back To Home -->
+            <a href="blog-content.html" class="back-home" style="font-size: 1.3rem;">ກັບຄືນໜ້າລາຍການ</a>
+            <!-- Title -->
+            <h1 class="header-title">ວິທີການຂຽນສູດຄິດໄລ່ໃນຕາຕະລາງຊໍາລະເງິນກູ້ຮູບແບບຕ່າງໆ</h1>
+            <!-- Post Image -->
+            <img src="assets/img/blog-01/ຕາຕະລາງຊໍາລະ-1.jpg" alt="" class="header-img">
+        </div>
+    </section>
+
+            <!-- Posts -->
+    <section class="post-content post-container">
+
+        <!-- ດອກເບ້ຍຫຼຸດລົງເປັນງວດ -->
+        <h2 class="sub-heading">01. ດອກເບ້ຍຫຼຸດລົງເປັນງວດ.</h2>
+            <p class="post-text">
+                <strong>&rarr;</strong> <u><b>ເດືອນ / ປີ</b></u> = IF(ໄລຍະເວລາກູ້ຢືມ &lt; ຄັ້ງທີຊໍາລະ," ",EDATE(ວັນທີກູ້ຢືມ,ຄັ້ງທີຊໍາລະ)) 
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u style="color: red;">ໝາຍເຫດ:</u> &nbsp;ຄັ້ງທີຊໍາລະ ແມ່ນເລີ່ມຕັ້ງແຕ່ຄັ້ງທີ 1 2 3....ໄປຈົນຮອດຄັ້ງທີຊໍາລະເດືອນສຸດທ້າຍ.
+            </p>
+            
+            <p class="post-text"><strong>&rarr;</strong> <u><b>ຕົ້ນທຶນຕໍ່ເດືອນ:</b></u></p>
+            <p class="post-text">
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 1 = IF(ວົງເງິນກູ້ &lt;=0," ",IF(ວົງເງິນກູ້ &gt;=0,CEILING(ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ,500),IF(ໄລຍະເວລາກູ້ຢືມ &lt;=0," ")))<br> 
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 2 = CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 &lt;&equals; 0,0,ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ),500)<br> 
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 3 = CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2 &lt;&equals; 0,0,IF(ຄັ້ງທີຊໍາລະ &equals; ໄລຍະເວລາກູ້ຢືມ,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 3,ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ),500)  
+            </p>
+            <p class="post-text">
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 4 = CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 3 &lt;&equals; 0,0,IF(ຄັ້ງທີຊໍາລະ &equals; ໄລຍະເວລາກູ້ຢືມ,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 4,ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ),500)<br>
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 5 = CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 4 &lt;&equals; 0,0,ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ),500)<br>
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 6 = CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 5 &lt;&equals; 0,0,IF(ຄັ້ງທີຊໍາລະ &equals; ໄລຍະເວລາກູ້ຢືມ,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 5,ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ),500)  
+            </p>
+
+            <p class="post-text"><strong>&rarr;</strong> <u><b>ດອກເບ້ຍຕໍ່ເດືອນ:</b></u></p>
+            <p class="post-text">
+                &minus;&nbsp; ດອກເບ້ຍຕໍ່ເດືອນ 1 = CEILING(ວົງເງິນກູ້ x ອັດຕາດອກເບ້ຍ,500)<br>
+                &minus;&nbsp; ດອກເບ້ຍຕໍ່ເດືອນ 2 = IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 &lt;&equals; 0,0,ດອກເບ້ຍຕໍ່ເດືອນ ເດືອນທີ 1)<br>
+                &minus;&nbsp; ດອກເບ້ຍຕໍ່ເດືອນ 3 = IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2 &lt;&equals; 0,0,ດອກເບ້ຍຕໍ່ເດືອນ ເດືອນທີ 1 ຫຼື 2 ກໍ່ໄດ້)
+            </p>
+            <p class="post-text">
+                &minus;&nbsp; ດອກເບ້ຍຕໍ່ເດືອນ 4 = CEILING(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 3 x ອັດຕາດອກເບ້ຍ,500)<br>
+                &minus;&nbsp; ດອກເບ້ຍຕໍ່ເດືອນ 5 = IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 4 &lt;&equals; 0,0,ດອກເບ້ຍຕໍ່ເດືອນ ເດືອນທີ 4)<br>
+                &minus;&nbsp; ດອກເບ້ຍຕໍ່ເດືອນ 6 = IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 5 &lt;&equals; 0,0,ດອກເບ້ຍຕໍ່ເດືອນ ເດືອນທີ 4 ຫຼື 5 ກໍ່ໄດ້)
+            </p>
+
+            <p class="post-text">
+                <strong>&rarr;</strong> <u><b>ລວມຊໍາລະຕໍ່ເດືອນ</b></u> = SUM(ຕົ້ນທຶນຕໍ່ເດືອນ : ດອກເບ້ຍຕໍ່ເດືອນ)
+            </p>
+            
+            <p class="post-text"><strong>&rarr;</strong> <u><b>ຍອດເຫຼືອເງິນກູ້:</b></u></p>
+            <p class="post-text">
+                &minus;&nbsp; ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 = ວົງເງິນກູ້ &minus; ຕົ້ນທຶນຕໍ່ເດືອນທີ 1
+                <br>&minus;&nbsp; ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2 = IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 &minus; ຕົ້ນທຶນຕໍ່ເດືອນທີ 2 &lt;&equals; 0,0,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 &minus; ຕົ້ນທຶນຕໍ່ເດືອນທີ 2)
+                <br>&minus;&nbsp; ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 3 = IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2 &minus; ຕົ້ນທຶນຕໍ່ເດືອນທີ 3 &lt;&equals; 0,0,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2 &minus; ຕົ້ນທຶນຕໍ່ເດືອນທີ 3)
+            </p>
+
+        <p class="post-text"></p>
+        
+        <!-- ດອກເບ້ຍແບບສະເໝີ -->
+        <h2 class="sub-heading">02. ດອກເບ້ຍແບບສະເໝີ.</h2>
+
+            <p class="post-text">
+                <strong>&rarr;</strong> <u><b>ເດືອນ / ປີ</b></u> = IF(ໄລຍະເວລາກູ້ຢືມ &lt; ຄັ້ງທີຊໍາລະ," ",EDATE(ວັນທີກູ້ຢືມ,ຄັ້ງທີຊໍາລະ)) 
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u style="color: red;">ໝາຍເຫດ:</u> &nbsp;ຄັ້ງທີຊໍາລະ ແມ່ນເລີ່ມຕັ້ງແຕ່ຄັ້ງທີ 1 2 3....ໄປຈົນຮອດຄັ້ງທີຊໍາລະເດືອນສຸດທ້າຍ.
+            </p>
+            
+            <p class="post-text"><strong>&rarr;</strong> <u><b>ຕົ້ນທຶນຕໍ່ເດືອນ:</b></u></p>
+            <p class="post-text">
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 1 = IF(ວົງເງິນກູ້ &lt;=0," ",IF(ວົງເງິນກູ້ &gt;=0,CEILING(ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ,500),IF(ໄລຍະເວລາກູ້ຢືມ &lt;=0," ")))<br>
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 2 = CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 &lt;&equals; 0,0,ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ),500)<br>
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 3 = CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2 &lt;&equals; 0,0,IF(ຄັ້ງທີຊໍາລະ &equals; ໄລຍະເວລາກູ້ຢືມ,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2,ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ),500)  
+            </p>
+            <p class="post-text">
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 4 = CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 3 &lt;&equals; 0,0,IF(ຄັ້ງທີຊໍາລະ &equals; ໄລຍະເວລາກູ້ຢືມ,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 3,ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ),500)<br>
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 5 = CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 4 &lt;&equals; 0,0,ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ),500)<br>
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 6 = CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 5 &lt;&equals; 0,0,IF(ຄັ້ງທີຊໍາລະ &equals; ໄລຍະເວລາກູ້ຢືມ,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 5,ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ),500)  
+            </p>
+
+            <p class="post-text"><strong>&rarr;</strong> <u><b>ດອກເບ້ຍຕໍ່ເດືອນ:</b></u></p>
+            <p class="post-text">
+                &minus;&nbsp; ດອກເບ້ຍຕໍ່ເດືອນ 1 = ROUNDUP(ວົງເງິນກູ້ x ອັດຕາດອກເບ້ຍ,-3) ຫຼື CEILING(ວົງເງິນກູ້ x ອັດຕາດອກເບ້ຍ,500)<br>
+                &minus;&nbsp;ດອກເບ້ຍຕໍ່ເດືອນ 2 = ROUNDUP(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 &lt;&equals; 0,0,ວົງເງິນກູ້ x ອັດຕາດອກເບ້ຍ),-3) ຫຼື IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 &lt;&equals; 0,0,ດອກເບ້ຍຕໍ່ເດືອນ ເດືອນທີ 1)<br>
+                &minus;&nbsp;ດອກເບ້ຍຕໍ່ເດືອນ 3 = ROUNDUP(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 &lt;&equals; 0,0,ວົງເງິນກູ້ x ອັດຕາດອກເບ້ຍ),-3) ຫຼື IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2 &lt;&equals; 0,0,ດອກເບ້ຍຕໍ່ເດືອນ ເດືອນທີ 1 ຫຼື 2 ກໍ່ໄດ້)
+            </p>
+            <p class="post-text">
+                &minus;&nbsp;ດອກເບ້ຍຕໍ່ເດືອນ 4 = ROUNDUP(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 3 &lt;&equals; 0,0,ວົງເງິນກູ້ x ອັດຕາດອກເບ້ຍ),-3) ຫຼື IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 3 &lt;&equals; 0,0,ດອກເບ້ຍຕໍ່ເດືອນ ເດືອນທີ 1)<br>
+                &minus;&nbsp;ດອກເບ້ຍຕໍ່ເດືອນ 5 = ROUNDUP(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 4 &lt;&equals; 0,0,ວົງເງິນກູ້ x ອັດຕາດອກເບ້ຍ),-3) ຫຼື IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 4 &lt;&equals; 0,0,ດອກເບ້ຍຕໍ່ເດືອນ ເດືອນທີ 4)<br>
+                &minus;&nbsp;ດອກເບ້ຍຕໍ່ເດືອນ 6 = ROUNDUP(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 5 &lt;&equals; 0,0,ວົງເງິນກູ້ x ອັດຕາດອກເບ້ຍ),-3) ຫຼື IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 5 &lt;&equals; 0,0,ດອກເບ້ຍຕໍ່ເດືອນ ເດືອນທີ 4 ຫຼື 5 ກໍ່ໄດ້)
+            </p>
+
+            <p class="post-text">
+                <strong>&rarr;</strong> <u><b>ລວມຊໍາລະຕໍ່ເດືອນ</b></u> = SUM(ຕົ້ນທຶນຕໍ່ເດືອນ : ດອກເບ້ຍຕໍ່ເດືອນ)
+            </p>
+            
+            <p class="post-text"><strong>&rarr;</strong> <u><b>ຍອດເຫຼືອເງິນກູ້:</b></u></p>
+            <p class="post-text">
+                &minus;&nbsp; ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 = ວົງເງິນກູ້ &minus; ຕົ້ນທຶນຕໍ່ເດືອນທີ 1
+                <br>&minus;&nbsp; ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2 = IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 &minus; ຕົ້ນທຶນຕໍ່ເດືອນທີ 2 &lt;&equals; 0,0,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 &minus; ຕົ້ນທຶນຕໍ່ເດືອນທີ 2)
+                <br>&minus;&nbsp; ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 3 = IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2 &minus; ຕົ້ນທຶນຕໍ່ເດືອນທີ 3 &lt;&equals; 0,0,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2 &minus; ຕົ້ນທຶນຕໍ່ເດືອນທີ 3)
+            </p>
+
+        <!-- ເລື່ອນຊໍາລະຕົ້ນທຶນ 3 ເດືອນທໍາອິດ -->
+        <h2 class="sub-heading">03. ເລື່ອນຊໍາລະຕົ້ນທຶນ 3 ເດືອນທໍາອິດ.</h2>
+            <p class="post-text"></p>
+
+        <!-- ດອກເບ້ຍຫຼຸດລົງເປັນເດືອນ -->
+        <h2 class="sub-heading">04. ດອກເບ້ຍຫຼຸດລົງເປັນເດືອນ.</h2>
+            <p class="post-text">
+                <strong>&rarr;</strong> <u><b>ເດືອນ / ປີ</b></u> = IF(ໄລຍະເວລາກູ້ຢືມ &lt; ຄັ້ງທີຊໍາລະ," ",EDATE(ວັນທີກູ້ຢືມ,ຄັ້ງທີຊໍາລະ)) 
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;<u style="color: red;">ໝາຍເຫດ:</u> &nbsp;ຄັ້ງທີຊໍາລະ ແມ່ນເລີ່ມຕັ້ງແຕ່ຄັ້ງທີ 1 2 3....ໄປຈົນຮອດຄັ້ງທີຊໍາລະເດືອນສຸດທ້າຍ.
+            </p>
+            
+            <p class="post-text"><strong>&rarr;</strong> <u><b>ຕົ້ນທຶນຕໍ່ເດືອນ:</b></u></p>
+            <p class="post-text">
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 1 = IF(ວົງເງິນກູ້ &lt;=0," ",IF(ວົງເງິນກູ້ &gt;=0,CEILING(ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ,500),IF(ໄລຍະເວລາກູ້ຢືມ &lt;=0," ")))<br>
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 2 = CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 &lt;&equals; 0,0,ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ),500)<br>
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 3 = CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2 &lt;&equals; 0,0,IF(ຄັ້ງທີຊໍາລະ &equals; ໄລຍະເວລາກູ້ຢືມ,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2,ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ),500)  
+            </p>
+            <p class="post-text">
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 4 = CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 3 &lt;&equals; 0,0,IF(ຄັ້ງທີຊໍາລະ &equals; ໄລຍະເວລາກູ້ຢືມ,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 3,ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ),500)<br>
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 5 = CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 4 &lt;&equals; 0,0,ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ),500)<br>
+                &minus;&nbsp; ຕົ້ນທຶນຕໍ່ເດືອນ 6 = CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 5 &lt;&equals; 0,0,IF(ຄັ້ງທີຊໍາລະ &equals; ໄລຍະເວລາກູ້ຢືມ,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 5,ວົງເງິນກູ້ / ໄລຍະເວລາກູ້ຢືມ),500)  
+            </p>
+
+            <p class="post-text"><strong>&rarr;</strong> <u><b>ດອກເບ້ຍຕໍ່ເດືອນ:</b></u></p>
+            <p class="post-text">
+                &minus;&nbsp; ດອກເບ້ຍຕໍ່ເດືອນ 1 = CEILING(ວົງເງິນກູ້ x ອັດຕາດອກເບ້ຍ,500)<br>
+                &minus;&nbsp;ດອກເບ້ຍຕໍ່ເດືອນ 2 = CEILING(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 x ອັດຕາດອກເບ້ຍ,1000) ຫຼື CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 &lt;&equals; 0,0,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 x ອັດຕາດອກເບ້ຍ)<br>
+                &minus;&nbsp;ດອກເບ້ຍຕໍ່ເດືອນ 3 = CEILING(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2 x ອັດຕາດອກເບ້ຍ,1000) ຫຼື CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2 &lt;&equals; 0,0,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2 x ອັດຕາດອກເບ້ຍ)
+            </p>
+            <p class="post-text">
+                &minus;&nbsp;ດອກເບ້ຍຕໍ່ເດືອນ 4 = CEILING(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 3 x ອັດຕາດອກເບ້ຍ,1000) ຫຼື CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 3 &lt;&equals; 0,0,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 3 x ອັດຕາດອກເບ້ຍ)<br>
+                &minus;&nbsp;ດອກເບ້ຍຕໍ່ເດືອນ 5 = CEILING(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 4 x ອັດຕາດອກເບ້ຍ,1000) ຫຼື CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 4 &lt;&equals; 0,0,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 4 x ອັດຕາດອກເບ້ຍ)<br>
+                &minus;&nbsp;ດອກເບ້ຍຕໍ່ເດືອນ 6 = CEILING(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 5 x ອັດຕາດອກເບ້ຍ,1000) ຫຼື CEILING(IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 5 &lt;&equals; 0,0,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 5 x ອັດຕາດອກເບ້ຍ)
+            </p>
+
+            <p class="post-text">
+                <strong>&rarr;</strong> <u><b>ລວມຊໍາລະຕໍ່ເດືອນ</b></u> = SUM(ຕົ້ນທຶນຕໍ່ເດືອນ : ດອກເບ້ຍຕໍ່ເດືອນ)
+            </p>
+            
+            <p class="post-text"><strong>&rarr;</strong> <u><b>ຍອດເຫຼືອເງິນກູ້:</b></u></p>
+            <p class="post-text">
+                &minus;&nbsp; ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 = ວົງເງິນກູ້ &minus; ຕົ້ນທຶນຕໍ່ເດືອນທີ 1
+                <br>&minus;&nbsp; ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2 = IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 &minus; ຕົ້ນທຶນຕໍ່ເດືອນທີ 2 &lt;&equals; 0,0,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 1 &minus; ຕົ້ນທຶນຕໍ່ເດືອນທີ 2)
+                <br>&minus;&nbsp; ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 3 = IF(ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2 &minus; ຕົ້ນທຶນຕໍ່ເດືອນທີ 3 &lt;&equals; 0,0,ຍອດເຫຼືອເງິນກູ້ ເດືອນທີ 2 &minus; ຕົ້ນທຶນຕໍ່ເດືອນທີ 3)
+            </p>
+            <p class="post-text"></p>
+
+    </section>
+    <!-- Share -->
+    <!-- <div class="share post-container">
+        <span class="share-title">Share this article</span>
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+        </div>
+    </div> -->
+
+    <!-- Footer -->
+    <div class="footer container">
+        <p>&#169; Lardev2022 All Right Reserved</p>
+        <div class="social">
+            <a href="https://www.facebook.com/lar.soutthivongnorlath"><i class='bx bxl-facebook'></i></a>
+            <!-- <a href="#"><i class='bx bxl-twitter'></i></a> -->
+            <a href="#"><i class='bx bxl-skype'></i></a>
+            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+        </div>
+    </div>
+
+    <!-- JQuery CDN Link -->
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
+    <!-- Link To JS -->
+    <script src="assets/js/blog-01.js"></script>
+</body>
+</html>
