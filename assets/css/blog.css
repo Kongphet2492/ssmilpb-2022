@@ -277,10 +277,10 @@ header.shadow .logo{
     margin-top: 10rem !important;
 }
 .sub-heading{
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 .post-text{
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     line-height: 1.3rem; /* ຈັດໄລຍະຫ່າງຂອງແຖວຕົວໜັງສື */
     margin: 1rem 0;
     text-align: justify; /* ເຮັດໃຫ້ຕົວໜັງສືຟາກຂາວ-ຊ້າຍຕິດຂອບສະເໝີກັນ */
@@ -313,7 +313,7 @@ header.shadow .logo{
         margin: 0 auto;
         width: 95%; 
     }
-    
+
 }
 @media (max-width:768px){
     .nav{
