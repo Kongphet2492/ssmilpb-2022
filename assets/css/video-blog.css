@@ -214,13 +214,13 @@
   cursor: pointer;
 }
 
-.course-3 .box .video video {
+/* .course-3 .box .video video {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
-}
+} */
 
 .course-3 .box .video i {
   position: absolute;
@@ -244,13 +244,13 @@
 }
 
 .course-3 .box .content h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #302851;
   padding: .5rem 0;
 }
 
 .course-3 .box .content p {
-  font-size: 1rem;
+  font-size: 0.7rem;
   color: #666;
 }
 
