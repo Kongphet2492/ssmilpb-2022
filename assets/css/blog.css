@@ -286,7 +286,7 @@ header.shadow .logo{
     text-align: justify; /* ເຮັດໃຫ້ຕົວໜັງສືຟາກຂາວ-ຊ້າຍຕິດຂອບສະເໝີກັນ */
 }
 /* Share */
-.share{
+/* .share{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -294,7 +294,7 @@ header.shadow .logo{
 }
 .share-title{
     font-size: 1.1rem;
-}
+} */
 /* Responsive */
 @media (max-width:1060px){
     .container{
